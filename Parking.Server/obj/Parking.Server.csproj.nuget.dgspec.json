@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/home/antonio/Documentos/super-parking/Parking.Server/Parking.Server.csproj": {}
+    "c:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj": {}
   },
   "projects": {
-    "/home/antonio/Documentos/super-parking/Parking.Server/Parking.Server.csproj": {
+    "c:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/antonio/Documentos/super-parking/Parking.Server/Parking.Server.csproj",
+        "projectUniqueName": "c:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj",
         "projectName": "Parking.Server",
-        "projectPath": "/home/antonio/Documentos/super-parking/Parking.Server/Parking.Server.csproj",
-        "packagesPath": "/home/antonio/.nuget/packages/",
-        "outputPath": "/home/antonio/Documentos/super-parking/Parking.Server/obj/",
+        "projectPath": "c:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj",
+        "packagesPath": "C:\\Users\\antonio.andrade\\.nuget\\packages\\",
+        "outputPath": "c:\\github\\super-parking\\Parking.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/antonio/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\antonio.andrade\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.0.10, )"
             }
           },
           "imports": [

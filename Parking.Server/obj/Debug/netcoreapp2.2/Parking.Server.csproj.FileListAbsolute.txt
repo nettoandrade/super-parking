@@ -12,3 +12,17 @@
 /home/antonio/Documentos/super-parking/Parking.Server/obj/Debug/netcoreapp2.2/Parking.Server.RazorTargetAssemblyInfo.cache
 /home/antonio/Documentos/super-parking/Parking.Server/obj/Debug/netcoreapp2.2/Parking.Server.dll
 /home/antonio/Documentos/super-parking/Parking.Server/obj/Debug/netcoreapp2.2/Parking.Server.pdb
+C:\github\super-parking\Parking.Server\bin\Debug\netcoreapp2.2\Parking.Server.deps.json
+C:\github\super-parking\Parking.Server\bin\Debug\netcoreapp2.2\Parking.Server.runtimeconfig.json
+C:\github\super-parking\Parking.Server\bin\Debug\netcoreapp2.2\Parking.Server.runtimeconfig.dev.json
+C:\github\super-parking\Parking.Server\bin\Debug\netcoreapp2.2\Parking.Server.dll
+C:\github\super-parking\Parking.Server\bin\Debug\netcoreapp2.2\Parking.Server.pdb
+C:\github\super-parking\Parking.Server\obj\Debug\netcoreapp2.2\Parking.Server.csprojAssemblyReference.cache
+C:\github\super-parking\Parking.Server\obj\Debug\netcoreapp2.2\Parking.Server.csproj.CoreCompileInputs.cache
+C:\github\super-parking\Parking.Server\obj\Debug\netcoreapp2.2\Parking.Server.RazorAssemblyInfo.cache
+C:\github\super-parking\Parking.Server\obj\Debug\netcoreapp2.2\Parking.Server.RazorAssemblyInfo.cs
+C:\github\super-parking\Parking.Server\obj\Debug\netcoreapp2.2\Parking.Server.AssemblyInfoInputs.cache
+C:\github\super-parking\Parking.Server\obj\Debug\netcoreapp2.2\Parking.Server.AssemblyInfo.cs
+C:\github\super-parking\Parking.Server\obj\Debug\netcoreapp2.2\Parking.Server.RazorTargetAssemblyInfo.cache
+C:\github\super-parking\Parking.Server\obj\Debug\netcoreapp2.2\Parking.Server.dll
+C:\github\super-parking\Parking.Server\obj\Debug\netcoreapp2.2\Parking.Server.pdb
