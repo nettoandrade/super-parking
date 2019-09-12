@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj": {}
+    "C:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj": {}
   },
   "projects": {
-    "c:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj": {
+    "C:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj",
+        "projectUniqueName": "C:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj",
         "projectName": "Parking.Server",
-        "projectPath": "c:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj",
+        "projectPath": "C:\\github\\super-parking\\Parking.Server\\Parking.Server.csproj",
         "packagesPath": "C:\\Users\\antonio.andrade\\.nuget\\packages\\",
-        "outputPath": "c:\\github\\super-parking\\Parking.Server\\obj\\",
+        "outputPath": "C:\\github\\super-parking\\Parking.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -39,6 +39,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",

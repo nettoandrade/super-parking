@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using Npgsql;
+using Parking.Server.Models;
 
 namespace Parking.Server.Controllers.DAO
 {
@@ -17,22 +19,21 @@ namespace Parking.Server.Controllers.DAO
 
     public ParkingDao()
     {
-        connString = String.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
+        connString = String.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};SSL Mode=Require;Trust Server Certificate=true;",
                                                     serverName, port, userName, password, databaseName);
     }
 
            //Inserir registros
-        public void InserirRegistros(string nome,string email, int idade)
+        public void InserirRegistros(string dsTabela,string vlMinimo, int vlAdicional)
         {
            
             try
             {
                 using (NpgsqlConnection pgsqlConnection = new NpgsqlConnection(connString))
-                {
-                    //Abra a conexão com o PgSQL                  
+                {                 
                     pgsqlConnection.Open();
 
-                    string cmdInserir = String.Format("Insert Into funcionarios(nome,email,idade) values('{0}','{1}',{2})",nome,email,idade);
+                    string cmdInserir = String.Format("Insert Into tabela_de_preco(DS_TABELA,VALOR_MINIMO,VALOR_ADICIONAL) values('{0}','{1}',{2})",dsTabela,vlMinimo,vlAdicional);
 
                     using (NpgsqlCommand pgsqlcommand = new NpgsqlCommand(cmdInserir, pgsqlConnection))
                     {
@@ -53,6 +54,49 @@ namespace Parking.Server.Controllers.DAO
                 pgsqlConnection.Close();
             }
         }
+
+    public List<TabelaDePreco> GetTabelaPreco(){
+        List<TabelaDePreco> tabela = new List<TabelaDePreco>();        
+        DataTable dt = new DataTable();
+        try
+            {
+                using (pgsqlConnection = new NpgsqlConnection(connString))
+                {
+                    // abre a conexão com o PgSQL e define a instrução SQL
+                    pgsqlConnection.Open();
+                    string cmdSeleciona = "Select * from TABELA_DE_PRECO order by 1";
+
+                    using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(cmdSeleciona, pgsqlConnection))
+                    {
+                        Adpt.Fill(dt);
+                    }
+                }
+            }
+            catch (NpgsqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                pgsqlConnection.Close();
+            }
+        
+            foreach (DataRow row in dt.Rows)
+                {
+                    TabelaDePreco dados = new TabelaDePreco(){
+                        DescTabela = row["DS_TABELA"].ToString(),
+                        vlMinimo = Double.Parse(row["VALOR_MINIMO"].ToString()),
+                        vlAdicional = Double.Parse(row["VALOR_ADICIONAL"].ToString())
+                    };
+                    tabela.Add(dados);
+                }            
+
+            return tabela;
+    }    
 
     public DataTable GetTodosRegistros()
         { 
