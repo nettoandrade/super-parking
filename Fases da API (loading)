@@ -18,9 +18,9 @@ Modelagem.:
 
 Fases solicitadas.:
 
-1 - Consultar quantidade de vagas disponíveis
+1 - Consultar quantidade de vagas disponíveis -- OK
 2 - Listar posição das vagas disponíveis
-3 - Estacionar um carro numa vaga
-4 - Pagar ticket
+3 - Estacionar um carro numa vaga -- Ok
+4 - Pagar ticket -- OK
 5 - Relatório com ocupação atual do estacionamento
-6 - Relatório com valor arrecadado por período
+6 - Relatório com valor arrecadado por período -- OK
