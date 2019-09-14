@@ -44,9 +44,24 @@ No entento, realizei a utilizaçao de um projeto web com dotNetCore MVC, utiliza
 No arquivo Fases da API está uma breve descrição do processo incompleto como tambem as informações que questão nesse arquivo.
 Tentando cumprir com o compromisso de entrega, estou enviando o Link para o email solicitado.
 
+Detalhe essa API parcial está sendo levantada na porta 5000.
 
-# Como entregar o desafio?
-Faça um fork desse repositório e mande o link de clonagem para rh@vsoft.com.br.
-Troque o item final (*Como entregar o desafio?*) por *Detalhe da solução*, onde você explicará as decisões de arquitetura que tomou e como executar seu projeto.
-Caso seja selecionado, você será convocado para apresentar sua solução presencialmente.
-Em caso de vaga de front-end, e que não se tenha conhecimento de back-end, pode-se usar um serviço de mocking gratuito como [mockAPI](https://www.mockapi.io) para simular o back-end.
+[HttpGet("v1/obter-vagas")]
+    - Parametro sigla
+[HttpGet("v1/obter-tabela-preco")]
+    - Parametro tabela
+[HttpGet("v1/obter-valor-ticket")]
+    - Parametro ticket
+[HttpPost("v1/pagar-ticket")]
+    - Parametro .:
+        -ticket
+        -valor
+[HttpPost("v1/estacionar")]
+    - Parametro .:
+        - Placa
+        - Setor
+        - TabelaDePreco
+[HttpPost("v1/obter-valor-periodo")]
+    - Parametro .:
+        - dataInicio
+        - dataFim
