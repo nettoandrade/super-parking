@@ -46,22 +46,22 @@ Tentando cumprir com o compromisso de entrega, estou enviando o Link para o emai
 
 Detalhe essa API parcial está sendo levantada na porta 5000.
 
-[HttpGet("v1/obter-vagas")]
+# GET "v1/obter-vagas"
     - Parametro sigla
-[HttpGet("v1/obter-tabela-preco")]
+# Get "v1/obter-tabela-preco"
     - Parametro tabela
-[HttpGet("v1/obter-valor-ticket")]
+# Get "v1/obter-valor-ticket"
     - Parametro ticket
-[HttpPost("v1/pagar-ticket")]
+# Post "v1/pagar-ticket"
     - Parametro .:
         -ticket
         -valor
-[HttpPost("v1/estacionar")]
+# Post "v1/estacionar"
     - Parametro .:
         - Placa
         - Setor
         - TabelaDePreco
-[HttpPost("v1/obter-valor-periodo")]
+# Post "v1/obter-valor-periodo"
     - Parametro .:
         - dataInicio
         - dataFim
