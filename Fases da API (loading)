@@ -1,0 +1,26 @@
+Modelagem.:
+- Criar Tabela Vagas:
+    - Setores
+    - Quantidade de Vagas
+
+- Criar Tabela Estacionamento
+    - Placa
+    - Data e Hora Inicio
+    - Data e Hora Fim
+    - Setor
+    - Numero Ticket (PK)
+
+- Criar Tabela Ticket
+    - Numero do Ticket
+    - Valor do Ticket
+    - Ticket Pago (S/N)
+    - Data e Hora do Pagamento 
+
+Fases solicitadas.:
+
+1 - Consultar quantidade de vagas disponíveis
+2 - Listar posição das vagas disponíveis
+3 - Estacionar um carro numa vaga
+4 - Pagar ticket
+5 - Relatório com ocupação atual do estacionamento
+6 - Relatório com valor arrecadado por período

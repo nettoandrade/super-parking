@@ -35,6 +35,9 @@ Métodos a serem criados:
 - Monitoramento da API
 - Front-end em um framework à sua escolha
 
+*Detalhe da solução*
+
+
 # Como entregar o desafio?
 Faça um fork desse repositório e mande o link de clonagem para rh@vsoft.com.br.
 Troque o item final (*Como entregar o desafio?*) por *Detalhe da solução*, onde você explicará as decisões de arquitetura que tomou e como executar seu projeto.
