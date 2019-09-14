@@ -35,7 +35,14 @@ Métodos a serem criados:
 - Monitoramento da API
 - Front-end em um framework à sua escolha
 
-*Detalhe da solução*
+# Detalhe da solução
+
+Boa Noite a Todos!
+
+Essa Solução está incompleta com base nas informações solicitadas acima.
+No entento, realizei a utilizaçao de um projeto web com dotNetCore MVC, utilizando como banco de dados o postgresql hospedado na heroku. 
+No arquivo Fases da API está uma breve descrição do processo incompleto como tambem as informações que questão nesse arquivo.
+Tentando cumprir com o compromisso de entrega, estou enviando o Link para o email solicitado.
 
 
 # Como entregar o desafio?
