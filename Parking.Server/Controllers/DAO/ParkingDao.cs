@@ -10,7 +10,7 @@ namespace Parking.Server.Controllers.DAO
     {
         
     static string serverName = "ec2-174-129-227-80.compute-1.amazonaws.com";                                          
-    static string port = "5432";                                                            
+    static string port = "5432";
     static string userName = "bvarzzeczllmfw";                                               
     static string password = "84f3684a8f799eef9c1a2260ebdee071e67753af0e259d892dd361a40b005cfc";                                             
     static string databaseName = "dcap88ssfll8df";                                       
@@ -86,14 +86,14 @@ namespace Parking.Server.Controllers.DAO
             }
         
             foreach (DataRow row in dt.Rows)
-                {
-                    TabelaDePreco dados = new TabelaDePreco(){
-                        DescTabela = row["DS_TABELA"].ToString(),
-                        vlMinimo = Double.Parse(row["VALOR_MINIMO"].ToString()),
-                        vlAdicional = Double.Parse(row["VALOR_ADICIONAL"].ToString())
-                    };
-                    tabela.Add(dados);
-                }            
+            {
+                TabelaDePreco dados = new TabelaDePreco(){
+                    DescTabela = row["DS_TABELA"].ToString(),
+                    vlMinimo = Double.Parse(row["VALOR_MINIMO"].ToString()),
+                    vlAdicional = Double.Parse(row["VALOR_ADICIONAL"].ToString())
+                };
+                tabela.Add(dados);
+            }            
 
             return tabela;
     }    
@@ -134,7 +134,7 @@ namespace Parking.Server.Controllers.DAO
         }
 
         //Deleta registros
-    public void DeletarRegistro(string nome)
+        public void DeletarRegistro(string nome)
     {
         try
         {
@@ -164,7 +164,49 @@ namespace Parking.Server.Controllers.DAO
             pgsqlConnection.Close();
         }
     }
-        
+    
+        internal List<Vaga> GetVagas()
+        {
+            List<Vaga> vagas = new List<Vaga>();
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (pgsqlConnection = new NpgsqlConnection(connString))
+                {
+                    // abre a conexão com o PgSQL e define a instrução SQL
+                    pgsqlConnection.Open();
+                    string cmdSeleciona = "Select * from public.vagas order by 1";
+
+                    using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(cmdSeleciona, pgsqlConnection))
+                    {
+                        Adpt.Fill(dt);
+                    }
+                }
+            }
+            catch (NpgsqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                pgsqlConnection.Close();
+            }
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Vaga dados = new Vaga(row["DS_SETOR"].ToString(),
+                                      int.Parse(row["NR_VAGA_TOTAL"].ToString()),
+                                      int.Parse(row["NR_VAGA_TOTAL"].ToString()));
+                vagas.Add(dados);
+            } 
+
+            return vagas;
+        }
     }
     
 }

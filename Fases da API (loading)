@@ -1,9 +1,9 @@
 Modelagem.:
-- Criar Tabela Vagas:
+- Criar Tabela Vagas:  OK
     - Setores
     - Quantidade de Vagas
 
-- Criar Tabela Estacionamento
+- Criar Tabela Estacionamento: 
     - Placa
     - Data e Hora Inicio
     - Data e Hora Fim

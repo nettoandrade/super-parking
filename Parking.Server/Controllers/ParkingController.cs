@@ -5,12 +5,15 @@ using Parking.Server.Controllers.DAO;
 
 namespace Parking.Server.Controllers
 {
+    
     public class ParkingController: Controller
     {
+        ParkingDao dao;
+
         [HttpGet("v1/obter-vagas")]
         public IActionResult ObterVagas() { 
-            
-            return Ok( new Car(Cor.Amarelo,"Gol","XXX-3030",null)); 
+            dao = new ParkingDao();
+            return Ok(dao.GetVagas()); 
 
         }
 
@@ -23,9 +26,9 @@ namespace Parking.Server.Controllers
 
         [HttpGet("v1/obter-tabela-preco")]
         public IActionResult ObterTabelas() { 
-
-            ParkingDao dao = new ParkingDao();
             
+            dao = new ParkingDao();
+
             return Ok(dao.GetTabelaPreco()); 
 
         }

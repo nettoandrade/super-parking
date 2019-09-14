@@ -2,17 +2,16 @@ namespace Parking.Server.Models
 {
     public class Vaga
     {
-        public Vaga(string cor, int numero, Sigla sigla, bool ocupado)
+
+        public Vaga(string sigla, int vagaTotal, int vagaDisponivel)
         {
-            this.cor = cor;
-            this.numero = numero;
+            this.vagaTotal = vagaTotal;
             this.sigla = sigla;
-            this.ocupado = ocupado;
+            this.vagaDisponivel = vagaDisponivel;
 
         }
-        public string cor { get; set; }
-        public int numero { get; set; }
-        public Sigla sigla { get; set; }
-        public bool ocupado { get; set; }
+        public int vagaDisponivel { get; set; }
+        public string sigla { get; set; }
+        public int vagaTotal { get; set; }
     }
 }
